@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/idIVQrcode"
+            android:layout_width="@dimen/size_300_dp"
+            android:layout_height="@dimen/size_300_dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_20_dp"
+            android:contentDescription="@string/qr_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Edit text to enter text
+            for creating a QR code-->
+        <EditText
+            android:id="@+id/idEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idIVQrcode"
+            android:layout_marginTop="@dimen/size_40_dp"
+            android:autofillHints=""
+            android:hint="@string/enter_your_info"
+            android:layout_marginLeft="@dimen/size_20_dp"
+            android:layout_marginRight="@dimen/size_20_dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idIVQrcode" />
+
+        <!--Button for creating a QR code-->
+        <Button
+            android:id="@+id/idBtnGenerateQR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idEdt"
+            android:layout_margin="@dimen/size_10_dp"
+            android:layout_marginBottom="@dimen/size_20_dp"
+            android:text="@string/generate_qr_code"
+            android:layout_marginLeft="@dimen/size_20_dp"
+            android:layout_marginRight="@dimen/size_20_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progress_imgUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/idBtnGenerateQR"
+            app:layout_constraintEnd_toEndOf="@+id/idEdt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/idIVQrcode"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

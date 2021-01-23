@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">QR</string>
+    <string name="qr_code">qr_code</string>
+    <string name="enter_your_info">Enter your info</string>
+    <string name="generate_qr_code">Generate QR Code</string>
+    <string name="empty_error_msg">Data can not empty</string>
+    <string name="img_uploaded">QR Image Uploaded Successfully</string>
+    <string name="action_share">Share</string>
+    <string name="ext_write_msg">Write External Permission is Need for Sharing the Image</string>
+    <string name="error_msg">OOP!s some thing went wrong</string>
+    <string name="network_error">Please check your Internet Connection</string>
+</resources>
